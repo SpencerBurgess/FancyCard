@@ -11,16 +11,16 @@ namespace FancyCard.Views
     [DesignTimeVisible(false)]
     public partial class NewCardPage : ContentPage
     {
-        public Card card { get; set; }
+        public Card Card { get; set; }
 
         public NewCardPage()
         {
             InitializeComponent();
 
-            card = new Card
+            Card = new Card
             {
                 Title = "Card name",
-                Description = "This is an item description."
+                Description = "This is a special card."
             };
 
             BindingContext = this;
@@ -28,7 +28,7 @@ namespace FancyCard.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddCard", card);
+            MessagingCenter.Send(this, "AddCard", Card);
             await Navigation.PopModalAsync();
         }
 
