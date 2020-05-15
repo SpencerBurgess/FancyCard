@@ -10,8 +10,14 @@ using FancyCard.Services;
 
 namespace FancyCard.ViewModels
 {
+    /// <summary>
+    /// Base View Model.
+    /// </summary>
     public class BaseViewModel : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Data Store.
+        /// </summary>
         public IDataStore<Card> DataStore => DependencyService.Get<IDataStore<Card>>();
 
         bool isBusy = false;
