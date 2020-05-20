@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 using Xamarin.Forms;
-
 using FancyCard.Models;
 using FancyCard.Services;
 
@@ -21,6 +19,9 @@ namespace FancyCard.ViewModels
         public IDataStore<Card> DataStore => DependencyService.Get<IDataStore<Card>>();
 
         bool isBusy = false;
+        /// <summary>
+        /// Is in busy state.
+        /// </summary>
         public bool IsBusy
         {
             get { return isBusy; }
@@ -28,6 +29,9 @@ namespace FancyCard.ViewModels
         }
 
         string title = string.Empty;
+        /// <summary>
+        /// Title of View Model.
+        /// </summary>
         public string Title
         {
             get { return title; }
